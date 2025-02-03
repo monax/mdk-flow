@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@monaxlabs/mdk-schema':
-        specifier: ^1.0.16
-        version: 1.0.16(typescript@5.5.4)
+        specifier: ^1.0.17
+        version: 1.0.17(typescript@5.5.4)
       eventemitter3:
         specifier: ^5.0.1
         version: 5.0.1
@@ -80,8 +80,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@monaxlabs/mdk-schema@1.0.16':
-    resolution: {integrity: sha512-BzEGXDSByDulb6m3Z8i3R5XWnOzWtddik6LqahcJGSoMkZAM6tC5xRBiBAh+L/h/QYpGQo3FdCtszcE/Fvn0aQ==}
+  '@monaxlabs/mdk-schema@1.0.17':
+    resolution: {integrity: sha512-mPmL0zEp+i1vDxbkAkSIMXl5Pc3ofPTQ8h2KG7hiEXXIK2NsEBhCjgBK8tSdZi00D7knECARla/AR6vf/1ztAQ==}
     peerDependencies:
       zod: 3.24.1
     peerDependenciesMeta:
@@ -216,7 +216,7 @@ snapshots:
   '@biomejs/cli-win32-x64@1.9.4':
     optional: true
 
-  '@monaxlabs/mdk-schema@1.0.16(typescript@5.5.4)':
+  '@monaxlabs/mdk-schema@1.0.17(typescript@5.5.4)':
     dependencies:
       bigdecimal: bigdecimal.js@1.3.0
       buffer: 6.0.3
