@@ -1,0 +1,33 @@
+name: Build
+
+concurrency:
+  group: $${{github.workflow}}-${{github.event.number || github.ref_name}}
+  cancel-in-progress: false
+
+on:
+  pull_request:
+  push:
+    tags:
+      - 'v*'
+    branches:
+      - main
+
+env:
+  NODE_OPTIONS: '--max-old-space-size=8192'
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Environment Setup
+        uses: ./.github/actions/environment
+      
+      - name: Lint
+        run: pnpm lint
+
+      - name: Build
+        run: pnpm build && pnpm prepack
+
