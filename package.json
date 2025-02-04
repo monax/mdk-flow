@@ -1,6 +1,6 @@
 {
   "name": "@monaxlabs/mdk-flow",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Monax Development Kit - Flow",
   "type": "module",
   "license": "Apache-2.0",
@@ -16,13 +16,15 @@
   "scripts": {
     "build": "pnpm build:ts",
     "build:ts": "tsc --build",
+    "test": "vitest --run",
     "format": "biome format . --write",
     "lint": "biome check . && tsc --noEmit",
     "prepack": "tsc -P ./tsconfig.prod.json"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "typescript": "5.5.4"
+    "typescript": "5.5.4",
+    "vitest": "^3.0.5"
   },
   "dependencies": {
     "@monaxlabs/mdk-schema": "^1.0.17",
